@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Maintenir</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f7f9fc;
+    }
+    .top-banner {
+      background-color: #1a5cf2;
+      color: white;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+    }
+    .top-banner a {
+      color: white;
+      text-decoration: none;
+    }
+    .top-banner a:hover {
+      opacity: 0.8;
+    }
+    .ac-container {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .ac-text {
+      flex: 2;
+    }
+    .ac-text h1 {
+      color: #1a5cf2;
+    }
+    .ac-text p {
+      margin-bottom: 1em;
+      line-height: 1.6;
+    }
+    .ac-images {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .ac-images img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .caption {
+      font-size: 0.9em;
+      color: #666;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<header class="top-banner">
+  <div>Portfolio</div>
+  <div><a href="index.html#portfolio">Retour aux compétences</a></div>
+</header>
+
+<div class="ac-container">
+  <div class="ac-text">
+    <h1>Maintenir</h1>
+    <h2>Proposer une solution de maintenance</h2><p>Lors de mon stage au CNPE du Bugey, j’ai été amené à développer une solution de maintenance préventive visant à détecter l’absence ou la corruption des fichiers d’enregistrement générés par les enregistreurs numériques YOKOGAWA (ENN), utilisés pour collecter les données critiques de sûreté. Pour cela, j’ai conçu un script en PowerShell capable d’explorer automatiquement les répertoires des serveurs IPS (Importants Pour la Sûreté) et NIPS (Non Importants), de vérifier la présence et l’intégrité des fichiers de données horaires, et de générer un rapport journalier listant les éventuels fichiers manquants, vides ou incohérents. Ce script pouvait être lancé manuellement ou intégré dans une tâche planifiée, et il a été conçu pour fonctionner sans modification sur toutes les tranches de la centrale. Il constitue un outil d’aide au diagnostic rapide pour les techniciens du service informatique industrielle, et permet d’éviter des pertes de données critiques qui pourraient compromettre la traçabilité des événements liés à la sûreté nucléaire. Ce projet m’a permis d’appliquer concrètement mes compétences en scripting et de répondre à un besoin réel de maintenance.
+</p>
+<h2>Proposer une procédure de maintenance</h2><p>Toujours dans le cadre de mon stage au CNPE du Bugey, j’ai été chargé de moderniser une procédure d’intervention critique : le remplacement d’un ENN IPS. L’ancienne procédure était devenue obsolète car elle imposait une méthode contraignante : connecter l’ENN sur site au réseau de configuration via un câble RJ45 et transférer les fichiers via FileZilla, ce qui générait des risques de sécurité et des contraintes de temps. J’ai donc rédigé une nouvelle procédure, en intégrant une méthode modernisée basée sur l’utilisation d’une carte Compact Flash (CF). Désormais, les fichiers de configuration peuvent être copiés sur la CF directement au bureau à l’aide d’un lecteur adapté, ce qui permet de préparer l’ENN en toute sécurité avant intervention. J’ai aussi inclus dans cette procédure la reconfiguration du port du switch réseau via l’outil Putty, afin de gérer les adresses MAC autorisées. Chaque étape a été testée sur un ENN de rechange, puis revue avec les techniciens pour garantir sa clarté et son applicabilité. Le résultat est une procédure complète, accessible à tous les techniciens, et adaptée aux exigences de sûreté du site.</p>
+
+  </div>
+  <div class="ac-images">
+    <div><img src="img/Maintenir.jpg" alt="Surveillance fichiers IPS"><div class="caption">Surveillance fichiers IPS</div></div>
+<div><img src="img/Centrale.jpg" alt="Modernisation procédure ENN"><div class="caption">Modernisation procédure ENN</div></div>
+
+  </div>
+</div>
+
+</body>
+</html>

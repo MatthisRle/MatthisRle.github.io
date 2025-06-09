@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>AC1 – Concevoir</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f7f9fc;
+    }
+
+    .top-banner {
+      background-color: #1a5cf2;
+      color: white;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+    }
+
+    .top-banner a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .top-banner a:hover {
+      opacity: 0.8;
+    }
+
+    .ac-container {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .ac-text {
+      flex: 2;
+    }
+
+    .ac-text h1 {
+      color: #1a5cf2;
+    }
+
+    .ac-text p {
+      margin-bottom: 1em;
+      line-height: 1.6;
+    }
+
+    .ac-images {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .ac-images img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .caption {
+      font-size: 0.9em;
+      color: #666;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="top-banner">
+  <div>Portfolio</div>
+  <div><a href="index.html#portfolio">Retour aux compétences</a></div>
+</header>
+
+  <div class="ac-container">
+    <div class="ac-text">
+      <h1>Concevoir</h1>
+      <h2>Prouver la pertinence de ses choix technologiques</h2>
+      <p>Durant mon alternance chez Assystem, j’ai été confronté à une problématique technique cruciale : comment représenter de façon claire, lisible et performante l’animation des flux de liquides dans les tuyaux sur les synoptiques de supervision développés sous AVEVA System Platform. L’approche initiale, dite "naïve", consistait à accumuler des conditions logiques complexes imbriquant les états de plusieurs équipements (cuves, pompes, vannes), ce qui rendait les formules d’animation très longues, peu lisibles, et surtout très sensibles aux erreurs lors des évolutions futures du système. En analysant ces limitations, nous avons, avec mon collègue, proposé une nouvelle méthode de conception plus modulaire et évolutive : chaque tuyau est désormais animé en fonction de l’état de l’équipement situé juste en amont et du tuyau précédent, via une propriété personnalisée appelée AnteEquipCondition. Nous avons créé un objet graphique réutilisable, avec une logique simplifiée fondée sur une propagation dynamique de l’animation. Cette solution a permis de diviser par cinq la complexité des expressions, d’augmenter significativement la maintenabilité du projet, et d’améliorer l’ergonomie du code. Ce choix a été validé et retenu comme standard sur l’ensemble du projet ISOVER, prouvant sa pertinence tant sur le plan technique qu’organisationnel.</p>
+      <h2>Rédiger un dossier de conception</h2>
+        <p>Dans le cadre du projet de gestion d’activités pour une base ADE, j’ai participé activement à la rédaction du dossier de conception. Celui-ci présente de manière structurée l’architecture technique de l’application. Nous avons documenté les différents répertoires, notamment le dossier css qui regroupe les fichiers de style selon les fonctionnalités, et le dossier PHP-echange qui contient les scripts serveurs assurant la logique métier, comme request_ajout.php ou validate_activity.php. J’ai également détaillé les formulaires d’ajout et de modification d’activités, en expliquant les méthodes HTTP utilisées (POST pour l’insertion ou la mise à jour, GET pour la récupération des informations), et justifié leur usage pour des raisons de sécurité et de clarté. Le dossier inclut enfin la structure de la base de données et les configurations SQL mises en œuvre, comme les triggers assurant la traçabilité via la table logs. Pour illustrer ces aspects, j’ai inséré des extraits de code PHP et SQL représentatifs, permettant de rendre compte concrètement des choix techniques opérés. </p>
+    </div>
+    <div class="ac-images">
+      <div>
+        <img src="img/Conception.jpg" alt="Synoptique AVEVA">
+        <div class="caption">Synoptique de supervision AVEVA</div>
+      </div>
+      <div>
+        <img src="img/Assystem.png" alt="Logo Assystem">
+        <div class="caption">Logo Assystem</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
