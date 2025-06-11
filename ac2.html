@@ -1,11 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>Vérifier</title>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Vérifier
+  </title>
   <style>
-    body {
+   body {
       font-family: Arial, sans-serif;
       margin: 0;
       background-color: #f7f9fc;
@@ -19,7 +20,6 @@
       align-items: center;
       font-weight: bold;
       font-size: 16px;
-      font-family: Arial, sans-serif;
     }
     .top-banner a {
       color: white;
@@ -28,33 +28,31 @@
     .top-banner a:hover {
       opacity: 0.8;
     }
-    .ac-container {
+    .ac-section {
       display: flex;
-      flex-direction: row;
-      gap: 40px;
-      max-width: 1200px;
+      flex-direction: column;
+      gap: 60px;
+      max-width: 1000px;
       margin: 40px auto;
       padding: 0 20px;
     }
-    .ac-text {
-      flex: 2;
-    }
-    .ac-text h1 {
-      color: #1a5cf2;
-    }
-    .ac-text p {
-  margin-bottom: 1em;
-  line-height: 1.6;
-  text-align: justify;
-}
-
-    .ac-images {
-      flex: 1;
+    .ac-block {
       display: flex;
       flex-direction: column;
       gap: 20px;
     }
-    .ac-images img {
+    .ac-text h2 {
+      color: #1a5cf2;
+    }
+    .ac-text p {
+      text-align: justify;
+      line-height: 1.6;
+    }
+    .ac-image {
+      width: 100%;
+      max-width: 100%;
+    }
+    .ac-image img {
       width: 100%;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -63,30 +61,54 @@
       font-size: 0.9em;
       color: #666;
       text-align: center;
+      margin-top: 8px;
     }
   </style>
-</head>
-<body>
-
-<header class="top-banner">
-  <div>Portfolio</div>
-  <div><a href="index.html#portfolio">Retour aux compétences</a></div>
-</header>
-
-<div class="ac-container">
-  <div class="ac-text">
-    <h1>Vérifier</h1>
-    <h2>Proposer une solution corrective à un dysfonctionnement</h2><p>Proposer une solution corrective à un dysfonctionnement
-Dans le cadre de la supervision AVEVA développée pour ISOVER, j’ai activement participé aux phases de tests de validation client (FAT – Factory Acceptance Test). Lors de ces tests, plusieurs anomalies ont été détectées dans les synoptiques : des objets mal animés, des incohérences d’état visuel, ou encore des erreurs dans l’affichage des informations. Pour identifier la cause de chaque dysfonctionnement, je me suis appuyé sur un fichier Excel partagé recensant toutes les remarques client, classées par vue synoptique, avec un court descriptif de l’anomalie. J’ai méthodiquement analysé chaque cas, en inspectant les bindings, les conditions d’animation, les noms de variables et la logique de fonctionnement de l’objet concerné. Les erreurs les plus fréquentes étaient liées à des erreurs de nommage, des animations conditionnelles incorrectes, ou l'oubli de liaison avec les propriétés d’objets dynamiques. J’ai ensuite consigné les corrections réalisées dans un fichier de suivi de résolution, ce qui a permis de retracer les modifications pour validation ultérieure. Ce travail m’a appris à diagnostiquer précisément des anomalies dans un système complexe et à proposer des corrections fiables et traçables.</p>
-<h2>Produire une procédure d’essais pour valider la conformité d’un système</h2><p>En collaboration avec l’équipe supervision d’Assystem, j’ai participé à la création d’une procédure d’essai visant à valider le bon fonctionnement des objets graphiques de la supervision développée sur AVEVA. Cette procédure spécifie pour chaque type d’équipement (pompes, vannes, moteurs, etc.) un ensemble de variables à vérifier (états, alarmes, consignes) ainsi que les conditions dans lesquelles ces vérifications doivent être faites. L’objectif était d’assurer que les animations graphiques soient bien synchronisées avec les états réels remontés par les automates, et que les vues soient conformes aux attentes d’utilisation terrain. Pour cela, j’ai établi un tableau de test croisé entre objets et synoptiques, associé à un statut de validation et des remarques éventuelles. Grâce à cette démarche structurée, nous avons pu anticiper les incohérences, corriger les erreurs, et livrer un système testé de manière rigoureuse. Ce travail m’a sensibilisé aux enjeux de la validation logicielle dans un environnement industriel critique, et à l’importance de la traçabilité dans le processus de vérification.</p>
-
+ </head>
+ <body>
+  <header class="top-banner">
+   <div>
+    Portfolio
+   </div>
+   <div>
+    <a href="index.html#portfolio">
+     Retour aux compétences
+    </a>
+   </div>
+  </header>
+  <div class="ac-section">
+   <div class="ac-block">
+    <div class="ac-text">
+     <h2>
+      Proposer une solution corrective à un dysfonctionnement
+     </h2>
+     <p>
+      Dans le cadre de la supervision AVEVA développée pour ISOVER, j’ai participé aux phases de tests de validation client (FAT – Factory Acceptance Test). Lors de ces tests, plusieurs anomalies ont été détectées dans les synoptiques : des objets mal animés, des incohérences d’état visuel, ou encore des erreurs dans l’affichage des informations. Pour identifier la cause de chaque dysfonctionnement, je me suis appuyé sur le fichier Excel partagé recensant toutes les remarques client, classées par vue synoptique, avec un court descriptif de l’anomalie. J’ai méthodiquement analysé chaque cas, en inspectant les configurations, les conditions d’animation, les noms de variables et la logique de fonctionnement de l’objet concerné. Les erreurs les plus fréquentes étaient liées à des erreurs de nommage, des animations conditionnelles incorrectes, ou l'oubli de liaison avec les propriétés d’objets dynamiques. J’ai ensuite consigné les corrections réalisées dans un fichier de suivi de résolution, ce qui a permis de retracer les modifications pour validation ultérieure. Ce travail m’a appris à diagnostiquer précisément des anomalies dans un système complexe et à proposer des corrections fiables et traçables.
+     </p>
+    </div>
+    <div class="ac-image">
+     <img alt="Correction de bugs" src="img/RemarqueClient.png"/>
+     <div class="caption">
+      Document correction client
+     </div>
+    </div>
+   </div>
+   <div class="ac-block">
+    <div class="ac-text">
+     <h2>
+      Produire une procédure d’essais pour valider la conformité d’un système
+     </h2>
+     <p>
+      En collaboration avec l’équipe supervision d’Assystem, j’ai participé à la création d’une procédure d’essai visant à valider le bon fonctionnement des objets graphiques de la supervision développée sur AVEVA. Cette procédure spécifie pour chaque type d’équipement (pompes, vannes, moteurs, etc.) un ensemble de variables à vérifier (états, alarmes, consignes) ainsi que les conditions dans lesquelles ces vérifications doivent être faites. L’objectif était d’assurer que les animations graphiques soient bien synchronisées avec les états réels remontés par les automates, et que les vues soient conformes aux attentes d’utilisation terrain. Pour cela, j’ai établi un tableau de test croisé entre objets et synoptiques, associé à un statut de validation et des remarques éventuelles. Grâce à cette démarche structurée, nous avons pu anticiper les incohérences, corriger les erreurs, et livrer un système testé de manière rigoureuse. Ce travail m’a sensibilisé aux enjeux de la validation logicielle dans un environnement industriel critique, et à l’importance de la traçabilité dans le processus de vérification.
+     </p>
+    </div>
+    <div class="ac-image">
+     <img alt="Tableau de validation" src="img/FichierTest.png"/>
+     <div class="caption">
+      Document test équipements
+     </div>
+    </div>
+   </div>
   </div>
-  <div class="ac-images">
-    <div><img src="img/Verifier.jpg" alt="Diagnostic supervision"><div class="caption">Diagnostic supervision</div></div>
-<div><img src="img/ECAM.png" alt="Procédures de validation"><div class="caption">Procédures de validation</div></div>
-
-  </div>
-</div>
-
-</body>
+ </body>
 </html>
