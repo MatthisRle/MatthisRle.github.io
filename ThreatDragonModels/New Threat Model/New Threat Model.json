@@ -2860,7 +2860,7 @@
           {
             "position": {
               "x": 449.99999999999966,
-              "y": 80.00000000000023
+              "y": 85.00000000000034
             },
             "size": {
               "width": 180,
@@ -2895,12 +2895,12 @@
           },
           {
             "position": {
-              "x": 702.25,
-              "y": 85.00000000000023
+              "x": 693,
+              "y": 100.00000000000023
             },
             "size": {
               "width": 460,
-              "height": 400
+              "height": 410
             },
             "attrs": {
               "label": {
@@ -2928,6 +2928,7 @@
                 "0ff103dc-db30-4281-939c-b122bbcdc4bd"
               ],
               "containedElements": [
+                "1797886d-3230-48b8-a167-e8b8fd5c2ece",
                 "e53532ef-5560-4861-843d-609a792ad725",
                 "8b2323c8-2e02-4d3a-b92d-4f56f4d897d9",
                 "accd8d05-aa98-4092-9e96-3d1c2a47e4a3",
@@ -3006,12 +3007,12 @@
           },
           {
             "position": {
-              "x": 780,
+              "x": 779.9999999999999,
               "y": 220.00000000000023
             },
             "size": {
               "width": 150,
-              "height": 270
+              "height": 290
             },
             "attrs": {
               "label": {
@@ -3515,7 +3516,7 @@
           {
             "position": {
               "x": 802.9999999999998,
-              "y": 230.00000000000023
+              "y": 250.00000000000023
             },
             "size": {
               "width": 110,
@@ -3656,8 +3657,8 @@
           },
           {
             "position": {
-              "x": 797.9999999999998,
-              "y": 360
+              "x": 795,
+              "y": 385.00000000000034
             },
             "size": {
               "width": 120,
@@ -4281,11 +4282,11 @@
             "vertices": [
               {
                 "x": 990,
-                "y": 285
+                "y": 305
               },
               {
                 "x": 1190,
-                "y": 310
+                "y": 330
               }
             ]
           },
@@ -4341,7 +4342,7 @@
             "vertices": [
               {
                 "x": 720,
-                "y": 420
+                "y": 440
               }
             ]
           },
@@ -4444,76 +4445,6 @@
             "target": {
               "cell": "a78f1791-64c9-41c2-b220-953e6699b7fe",
               "port": "498e9201-6ece-4740-99cf-3f497f47f535"
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
             }
           },
           {
@@ -4831,7 +4762,7 @@
             "vertices": [
               {
                 "x": 1120,
-                "y": 430
+                "y": 450
               }
             ]
           },
