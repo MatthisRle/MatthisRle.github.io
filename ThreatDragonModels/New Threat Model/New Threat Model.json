@@ -1084,7 +1084,7 @@
           {
             "position": {
               "x": 649.9999999999989,
-              "y": 20.000000000000966
+              "y": 30
             },
             "size": {
               "width": 600,
@@ -1108,7 +1108,6 @@
               "crossingFlows": [
                 "bf83e6a6-4cb3-4205-80f7-dba5c2be7cad",
                 "a21b7b6f-ed70-4794-8991-1db6d4c0e607",
-                "af5125f3-0bc7-4b13-af2a-6dadc76e37b2",
                 "9930f5a7-1692-463e-a6e2-a3231d899538",
                 "14eb7e78-e5a2-4a50-b7a9-071f2a62bb8c",
                 "f73c3d0f-3894-4dce-831a-d97da073f851",
@@ -1116,6 +1115,7 @@
               ],
               "containedElements": [
                 "7a50f5cb-d6e6-4ba0-a401-d78716e4cde1",
+                "8d1ed839-8785-4bc0-ab11-0c5456bf064e",
                 "3cc46fb3-d6f5-4c3d-b5fd-e12c723c0214",
                 "83d34a44-460a-4f5e-a593-4ccd03becbb6"
               ]
@@ -1589,9 +1589,7 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": [
-                "cb043e48-ba24-45de-be4b-2e34ef0df1c3"
-              ]
+              "trustBoundaryIds": []
             },
             "labels": [
               "HTTP : SSRF / lookup local"
@@ -1614,7 +1612,7 @@
           {
             "position": {
               "x": 1554,
-              "y": 100
+              "y": 90.00000000000071
             },
             "size": {
               "width": 120,
@@ -1625,11 +1623,13 @@
                 "text": "Partage Samba"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1726,13 +1726,46 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "51ff6cdb-66b7-4506-b403-2e0c07f6c116",
+                  "title": "Exposition des pièces d'identité sur partage non restreint (I)",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Un visiteur du réseau local se connecte en accès invité/anonyme sur le partage Samba (port 445) pour télécharger les copies numérisées de passeports déposées par le processus de réservation.",
+                  "mitigation": "N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": ""
+                },
+                {
+                  "id": "4c0f2ca8-46fb-44a0-9d82-f6de77d5252c",
+                  "title": "Déni de service par saturation de l'espace disque (D)",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Un utilisateur malveillant upload massivement des fichiers volumineux sur le partage réseau Samba jusqu'à remplir intégralement le système de fichiers hôte, bloquant ainsi tout nouvel enregistrement de justificatif de réservation.",
+                  "mitigation": "N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 15,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -1983,8 +2016,8 @@
                 "text": "Apache 2.4.49\n(:8080)"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -2081,17 +2114,39 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "46de9b78-9943-4a70-8f2c-903e99aedb7d",
+                  "title": "Exécution de code à distance (T)",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Un attaquant distant envoie une requête HTTP forgée contenant des séquences de traversée de répertoire (.%2e) à Apache 2.4.49 sur le port 8080 pour exécuter des commandes système via mod_cgi (/bin/sh).",
+                  "mitigation": "N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 2,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
             "position": {
-              "x": 646,
+              "x": 649.9999999999989,
               "y": 185
             },
             "size": {
@@ -2103,13 +2158,14 @@
                 "text": "Service preview\n(:3000)"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 20,
             "ports": {
               "groups": {
                 "top": {
@@ -2193,7 +2249,6 @@
               ]
             },
             "id": "8d1ed839-8785-4bc0-ab11-0c5456bf064e",
-            "zIndex": 20,
             "data": {
               "type": "tm.Process",
               "name": "Service preview\n(:3000)",
@@ -2201,12 +2256,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "aa79c145-3ae3-4225-9382-6590626e05aa",
+                  "title": "Requête forgée côté serveur / SSRF vers le loopback (T)",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Un attaquant injecte l'URL dans le formulaire du service de prévisualisation (:3000) pour forcer le processus Node.js à extraire la configuration système et les secrets de l'API d'administration interne.",
+                  "mitigation": "N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 11,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -2223,13 +2300,14 @@
                 "text": "Appache / PHP  \n(Search, avis, login, resa)"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 21,
             "ports": {
               "groups": {
                 "top": {
@@ -2313,7 +2391,6 @@
               ]
             },
             "id": "3cc46fb3-d6f5-4c3d-b5fd-e12c723c0214",
-            "zIndex": 21,
             "data": {
               "type": "tm.Process",
               "name": "Appache / PHP  \n(Search, avis, login, resa)",
@@ -2321,12 +2398,73 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "ac608f36-edf8-42d1-84c4-5228b430247d",
+                  "title": "Usurpation de compte client par bourrage d'identifiants (S)",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Un attaquant distant non authentifié soumet des listes de couples identifiant/mot de passe en masse sur login.php sans restriction de débit afin d'usurper l'identité de clients légitimes et d'accéder à leurs données personnelles.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                },
+                {
+                  "id": "353de0a6-0669-4ece-b022-51da4eb2cc80",
+                  "title": "Extraction massive de données clients par injection SQL (T)",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Un attaquant distant non authentifié injecte une charge SQL malveillante dans le champ de recherche de search.php pour détourner la requête initiale et extraire l'intégralité de la table clients (noms, emails, numéros de passeport) depuis MariaDB vers Internet.",
+                  "mitigation": "N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
+                },
+                {
+                  "id": "3bf8a1c5-7e5a-4672-8e9a-a96e3e47b97b",
+                  "title": "Accès et altération non autorisés de dossiers par IDOR (E)",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "Un client authentifié modifie arbitrairement la valeur du paramètre numérique de réservation dans l'URL de reservation.php afin de consulter et d'annuler les réservations d'autres clients sans contrôle de session.",
+                  "mitigation": "N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": ""
+                },
+                {
+                  "id": "4561e551-5098-42b6-8bcf-cf1fb90d2272",
+                  "title": "Déni de service par saturation des descripteurs Web (D)",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Un attaquant inonde search.php avec des requêtes SQL lourdes simultanées sans restriction de fréquence, monopolisant l'ensemble des descripteurs Apache et des workers PHP-FPM, ce qui rend l'application inaccessible aux clients légitimes.",
+                  "mitigation": "N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 2,
+                "tampering": 2,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 2
+              }
             }
           },
           {
@@ -2375,7 +2513,13 @@
             "target": {
               "cell": "3cc46fb3-d6f5-4c3d-b5fd-e12c723c0214",
               "port": "a5b39bda-d3d5-4a69-bc45-2bdbd6f648ef"
-            }
+            },
+            "vertices": [
+              {
+                "x": 430,
+                "y": 353
+              }
+            ]
           },
           {
             "position": {
@@ -2398,6 +2542,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 23,
             "ports": {
               "groups": {
                 "top": {
@@ -2481,7 +2626,6 @@
               ]
             },
             "id": "83d34a44-460a-4f5e-a593-4ccd03becbb6",
-            "zIndex": 23,
             "data": {
               "type": "tm.Process",
               "name": "API Interne",
@@ -2511,13 +2655,14 @@
                 "text": "Service métriques \n(:9100)"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 24,
             "ports": {
               "groups": {
                 "top": {
@@ -2601,7 +2746,6 @@
               ]
             },
             "id": "b5e2e13e-6019-4071-ad67-c92a9c794c89",
-            "zIndex": 24,
             "data": {
               "type": "tm.Process",
               "name": "Service métriques \n(:9100)",
@@ -2609,12 +2753,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "1812d428-715a-40fa-8e7f-c70b8f5ef235",
+                  "title": "Reconnaissance passive via l'exposition des métriques (I)",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Un attaquant non authentifié interroge directement le port 9100 depuis le réseau local pour lire les métriques système brutes (processus actifs, charge CPU, volumes de transactions) afin d'identifier les goulets d'étranglement de l'infrastructure.",
+                  "mitigation": "N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -2677,6 +2843,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "",
-    "threatTop": 1
+    "threatTop": 16
   }
 }
