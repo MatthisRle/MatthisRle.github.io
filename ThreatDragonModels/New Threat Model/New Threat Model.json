@@ -1111,8 +1111,8 @@
                 "af5125f3-0bc7-4b13-af2a-6dadc76e37b2",
                 "9930f5a7-1692-463e-a6e2-a3231d899538",
                 "14eb7e78-e5a2-4a50-b7a9-071f2a62bb8c",
-                "4f3e4646-26db-4fc2-92b4-0d8bfac00406",
-                "f73c3d0f-3894-4dce-831a-d97da073f851"
+                "f73c3d0f-3894-4dce-831a-d97da073f851",
+                "4f3e4646-26db-4fc2-92b4-0d8bfac00406"
               ],
               "containedElements": [
                 "7a50f5cb-d6e6-4ba0-a401-d78716e4cde1",
@@ -1123,12 +1123,12 @@
           },
           {
             "position": {
-              "x": 1373,
-              "y": 70.00000000000071
+              "x": 1372.9999999999998,
+              "y": 70.00000000000136
             },
             "size": {
               "width": 330,
-              "height": 370
+              "height": 380
             },
             "attrs": {
               "label": {
@@ -1153,7 +1153,7 @@
               "containedElements": [
                 "2ac63879-3821-4cbd-9836-dcfba3dd519e",
                 "0b90ee0b-dde1-48b2-bb7f-288072691fa8",
-                "d2ac1e4f-9740-45df-b4d6-8ab2c1e3f806"
+                "b5e2e13e-6019-4071-ad67-c92a9c794c89"
               ]
             }
           },
@@ -1493,112 +1493,7 @@
               "x": 700,
               "y": 240
             },
-            "vertices": [],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            }
+            "vertices": []
           },
           {
             "shape": "flow",
@@ -1965,123 +1860,6 @@
             }
           },
           {
-            "position": {
-              "x": 1554,
-              "y": 348
-            },
-            "size": {
-              "width": 120,
-              "height": 60
-            },
-            "attrs": {
-              "text": {
-                "text": "Service métriques \n(:9100)"
-              },
-              "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              }
-            },
-            "visible": true,
-            "shape": "actor",
-            "zIndex": 14,
-            "ports": {
-              "groups": {
-                "top": {
-                  "position": "top",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "position": "right",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "bottom": {
-                  "position": "bottom",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "left": {
-                  "position": "left",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                }
-              },
-              "items": [
-                {
-                  "group": "top",
-                  "id": "d2287574-1772-44e0-b79e-379da5e9a383"
-                },
-                {
-                  "group": "right",
-                  "id": "bd1e0e13-7b35-4e0c-8d55-1bee1292b0af"
-                },
-                {
-                  "group": "bottom",
-                  "id": "a9227e5b-03fe-4e5a-a502-9706d0c47d21"
-                },
-                {
-                  "group": "left",
-                  "id": "1ba724a5-14e9-4c45-879e-b91ce94c7fe5"
-                }
-              ]
-            },
-            "id": "d2ac1e4f-9740-45df-b4d6-8ab2c1e3f806",
-            "data": {
-              "type": "tm.Actor",
-              "name": "Service métriques \n(:9100)",
-              "description": "",
-              "isTrustBoundary": false,
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "providesAuthentication": false,
-              "threats": []
-            }
-          },
-          {
             "shape": "flow",
             "attrs": {
               "line": {
@@ -2188,131 +1966,6 @@
               {
                 "x": 1180,
                 "y": 320
-              }
-            ],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": "block"
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 17,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "HTTP/9100 : scrape métrique",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": true,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": [
-                "cb043e48-ba24-45de-be4b-2e34ef0df1c3",
-                "8d1e72eb-3782-44d9-bb1f-0edeecf2ceef"
-              ]
-            },
-            "labels": [
-              "HTTP/9100 : scrape métrique"
-            ],
-            "id": "4f3e4646-26db-4fc2-92b4-0d8bfac00406",
-            "source": {
-              "cell": "3cc46fb3-d6f5-4c3d-b5fd-e12c723c0214",
-              "port": "89b8d080-3b4c-4c83-a1ce-bc5f2b1dce4f"
-            },
-            "target": {
-              "cell": "d2ac1e4f-9740-45df-b4d6-8ab2c1e3f806",
-              "port": "1ba724a5-14e9-4c45-879e-b91ce94c7fe5"
-            },
-            "vertices": [
-              {
-                "x": 1000,
-                "y": 378
               }
             ]
           },
@@ -2843,6 +2496,181 @@
               "privilegeLevel": "",
               "threats": []
             }
+          },
+          {
+            "position": {
+              "x": 1534,
+              "y": 310.00000000000097
+            },
+            "size": {
+              "width": 160,
+              "height": 120
+            },
+            "attrs": {
+              "text": {
+                "text": "Service métriques \n(:9100)"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "61531ca1-c489-4b0a-b4a8-ebd4702f0e59"
+                },
+                {
+                  "group": "right",
+                  "id": "89b8d080-3b4c-4c83-a1ce-bc5f2b1dce4f"
+                },
+                {
+                  "group": "bottom",
+                  "id": "5c7e4c22-2726-4ab4-a9b8-95da62266f45"
+                },
+                {
+                  "group": "left",
+                  "id": "a5b39bda-d3d5-4a69-bc45-2bdbd6f648ef"
+                }
+              ]
+            },
+            "id": "b5e2e13e-6019-4071-ad67-c92a9c794c89",
+            "zIndex": 24,
+            "data": {
+              "type": "tm.Process",
+              "name": "Service métriques \n(:9100)",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 25,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "HTTP/9100 : scrape métrique",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "cb043e48-ba24-45de-be4b-2e34ef0df1c3",
+                "8d1e72eb-3782-44d9-bb1f-0edeecf2ceef"
+              ]
+            },
+            "labels": [
+              "HTTP/9100 : scrape métrique"
+            ],
+            "id": "4f3e4646-26db-4fc2-92b4-0d8bfac00406",
+            "source": {
+              "cell": "3cc46fb3-d6f5-4c3d-b5fd-e12c723c0214",
+              "port": "89b8d080-3b4c-4c83-a1ce-bc5f2b1dce4f"
+            },
+            "target": {
+              "cell": "b5e2e13e-6019-4071-ad67-c92a9c794c89",
+              "port": "a5b39bda-d3d5-4a69-bc45-2bdbd6f648ef"
+            },
+            "vertices": [
+              {
+                "x": 1230,
+                "y": 398
+              }
+            ]
           }
         ]
       }
