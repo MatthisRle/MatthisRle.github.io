@@ -3485,8 +3485,8 @@
                 "text": "Remboursement\n.php"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -3583,12 +3583,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "15fd1c4e-da05-445d-ad9a-33e997301520",
+                  "title": "Répudiation d'un remboursement illégitime émis par un agent interne",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Repudiation",
+                  "description": "Un agent support (Isabelle ou David) procède au remboursement arbitraire de plusieurs milliers d'euros sur une carte complice puis nie l'action ; en l'absence de journalisation d'audit centralisée mentionnant formellement l'identité de l'opérateur et la justification de l'acte, la responsabilité ne peut être établie.",
+                  "mitigation": "N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 2,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -3605,8 +3627,8 @@
                 "text": "reservation.php"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -3703,12 +3725,47 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "682c52e0-1bf7-49cd-ae8b-6a6a3110afb8",
+                  "title": "Paralysie des réservations par panne non anticipée de PaySwift",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Le service externe PaySwift subit une panne réseau prolongée ; en l'absence de procédure ou de mode dégradé (comme le maintien temporaire du paiement différé par virement sous 48 h), l'ensemble du tunnel de commande de GoTravel est bloqué, causant une perte directe de chiffre d'affaires.",
+                  "mitigation": "N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 24,
+                  "score": ""
+                },
+                {
+                  "id": "fb892df7-48a4-4eba-92cb-416b46fa2a1c",
+                  "title": "Remboursement sans plafond ni double contrôle par un agent N1",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "Un agent de niveau 1 (Isabelle Perrin) ou un compte support compromis injecte un montant arbitraire sans limite dans remboursement.php pour déclencher un virement sortant massif chez PaySwift, exploitant l'absence totale de plafond et de double validation humaine.",
+                  "mitigation": "N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 25,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 1
+              }
             }
           },
           {
@@ -3725,11 +3782,13 @@
                 "text": "public/exports/csv"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -3826,13 +3885,33 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "b78e574e-97e5-480e-8d20-5e845acc4194",
+                  "title": "Fuite massive de données financières via l'export mensuel public",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Un visiteur anonyme devine le nom séquentiel ou date-dépendant du fichier (export-YYYY-MM.csv) hébergé directement dans l'arborescence web publique pour télécharger la liste des clients, emails, montants et tokens PaySwift (pst_live_xxxx) sans authentification.",
+                  "mitigation": "N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 21,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -3849,8 +3928,8 @@
                 "text": "pay/webhook"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -3947,12 +4026,60 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "e7a07815-55b4-4470-8b1f-b9b9ce5e1358",
+                  "title": "Falsification de webhook par injection de fausses notifications",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Un attaquant distant forge une requête HTTPS POST directement vers /pay/webhook depuis Internet sans fournir de signature cryptographique valide, afin de passer une réservation en statut payee dans MariaDB sans avoir déboursé le moindre centime.",
+                  "mitigation": "N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 17,
+                  "score": ""
+                },
+                {
+                  "id": "9750ca48-7597-4e9d-8a71-d25e67d08eac",
+                  "title": "Rejeu de notifications de paiement valides",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Un attaquant intercepte un appel réseau légitime de PaySwift ou réémet plusieurs fois la même notification de paiement vers /pay/webhook, exploitant l'absence de clé d'idempotence pour forcer des écritures et validations concurrentes dans la table payments.",
+                  "mitigation": "N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 18,
+                  "score": ""
+                },
+                {
+                  "id": "dedf7ad6-70cf-41eb-8d25-a7262218d715",
+                  "title": "Blocage des encaissements par saturation de l'écouteur de paiement",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Un attaquant inonde publiquement le point de terminaison /pay/webhook avec des milliers de requêtes POST bidons par seconde, saturant les workers PHP et empêchant PaySwift de délivrer les vraies confirmations d'achat, ce qui bloque toutes les ventes de billets.",
+                  "mitigation": "N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 22,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -4337,8 +4464,8 @@
           },
           {
             "position": {
-              "x": 1722,
-              "y": 140
+              "x": 1722.25,
+              "y": 140.00000000000034
             },
             "size": {
               "width": 120,
@@ -4349,11 +4476,13 @@
                 "text": "Table : Payement"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -4450,13 +4579,33 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "11e63f6b-de84-433f-91d8-327646727227",
+                  "title": "Répudiation de paiement par le client suite à un litige",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Repudiation",
+                  "description": "Un client conteste auprès de sa banque un débit réel en affirmant n'avoir jamais validé le paiement sur PaySwift ; GoTravel est dans l'incapacité juridique de trancher le litige et d'opposer la preuve de commande, car le système n'enregistre aucun journal d'audit horodaté et inaltérable liant l'IP, le panier et la confirmation.",
+                  "mitigation": "N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 19,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 2,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -4742,6 +4891,6 @@
     ],
     "diagramTop": 3,
     "reviewer": "",
-    "threatTop": 16
+    "threatTop": 25
   }
 }
