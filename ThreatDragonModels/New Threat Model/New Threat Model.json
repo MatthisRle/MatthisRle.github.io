@@ -3925,7 +3925,7 @@
             },
             "attrs": {
               "text": {
-                "text": "pay/webhook"
+                "text": "/pay/webhook"
               },
               "body": {
                 "stroke": "red",
@@ -4021,7 +4021,7 @@
             "id": "5bdaeebd-574c-484b-855e-8ab09fffe5a0",
             "data": {
               "type": "tm.Process",
-              "name": "pay/webhook",
+              "name": "/pay/webhook",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
