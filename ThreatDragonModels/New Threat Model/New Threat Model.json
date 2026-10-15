@@ -4253,7 +4253,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "POST refunds (token)",
+              "name": "POST refunds",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -4271,7 +4271,7 @@
               ]
             },
             "labels": [
-              "POST refunds (token)"
+              "POST refunds"
             ],
             "id": "47056edd-b604-44e0-a6be-e81a4f5536a0",
             "source": {
