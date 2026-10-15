@@ -2956,7 +2956,9 @@
               "isTrustBoundary": true,
               "hasOpenThreats": false,
               "crossingFlows": [
-                "335c37c5-9e09-4a90-bc0b-a2c1782cd1cc"
+                "90f42ed2-6948-44cb-9abf-812954ba6772",
+                "335c37c5-9e09-4a90-bc0b-a2c1782cd1cc",
+                "eb32b173-5605-45e0-b13c-6581e1709529"
               ],
               "containedElements": [
                 "8c9aa632-123e-404d-8a6d-9ac5a0d9ee74"
@@ -2989,6 +2991,7 @@
               "hasOpenThreats": false,
               "crossingFlows": [
                 "0ff103dc-db30-4281-939c-b122bbcdc4bd",
+                "47056edd-b604-44e0-a6be-e81a4f5536a0",
                 "35dcfeec-b6db-4fc2-b08e-cf5c178b221c"
               ],
               "containedElements": [
@@ -4234,7 +4237,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "UPDATE statut = payée",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -4245,20 +4248,82 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "7ee46b6d-5e1f-41b6-aecc-983690d8cc3e"
+              ]
             },
             "labels": [
-              "Data Flow"
+              "UPDATE statut = payée"
             ],
-            "id": "2ade2d1e-f658-4670-be92-a86f8c538dda",
+            "id": "90f42ed2-6948-44cb-9abf-812954ba6772",
             "source": {
-              "x": 1381,
-              "y": 255
+              "x": 1180,
+              "y": 360
             },
             "target": {
-              "x": 1481,
-              "y": 355
-            }
+              "cell": "8c9aa632-123e-404d-8a6d-9ac5a0d9ee74",
+              "port": "33500e38-b2eb-4936-9bc1-c6485ce4e615"
+            },
+            "vertices": [
+              {
+                "x": 1490,
+                "y": 270
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "POST refunds (token)",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "f1734a8a-80db-4a1a-87d2-d174afb457ce"
+              ]
+            },
+            "labels": [
+              "POST refunds (token)"
+            ],
+            "id": "47056edd-b604-44e0-a6be-e81a4f5536a0",
+            "source": {
+              "x": 800,
+              "y": 280
+            },
+            "target": {
+              "cell": "42faa575-7e77-4b04-876c-757f2bc56186",
+              "port": "fcbbd0ce-4339-40a0-a19b-a9c5dedee1f8"
+            },
+            "vertices": [
+              {
+                "x": 1300,
+                "y": 300
+              }
+            ]
           },
           {
             "position": {
@@ -4576,7 +4641,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Lecture transactions",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -4592,7 +4657,7 @@
               ]
             },
             "labels": [
-              "Data Flow"
+              "Lecture transactions"
             ],
             "id": "335c37c5-9e09-4a90-bc0b-a2c1782cd1cc",
             "source": {
@@ -4605,10 +4670,62 @@
             },
             "vertices": [
               {
-                "x": 1300,
-                "y": 210
+                "x": 1110,
+                "y": 200
+              },
+              {
+                "x": 1430,
+                "y": 170
               }
             ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 15,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "UPDATE statut = remboursée",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "7ee46b6d-5e1f-41b6-aecc-983690d8cc3e"
+              ]
+            },
+            "labels": [
+              "UPDATE statut = remboursée"
+            ],
+            "id": "eb32b173-5605-45e0-b13c-6581e1709529",
+            "source": {
+              "x": 800,
+              "y": 280
+            },
+            "target": {
+              "cell": "8c9aa632-123e-404d-8a6d-9ac5a0d9ee74",
+              "port": "33500e38-b2eb-4936-9bc1-c6485ce4e615"
+            }
           }
         ]
       }
